@@ -1,0 +1,6 @@
+{
+  "name": "Собери Россию - Пазлы Регионов",
+  "description": "Интерактивная игра-пазл по регионам России с картой субъектов, кодами регионов, 3 уровнями сложности и историческими фактами.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

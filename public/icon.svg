@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="flagWhite" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="flagBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="flagRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#dc2626" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded app icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"/>
+
+  <!-- Jigsaw puzzle piece shape -->
+  <g filter="url(#shadow)">
+    <!-- Main Puzzle Piece outline -->
+    <path d="M 140 140
+             H 220
+             C 215 105, 240 85, 256 85
+             C 272 85, 297 105, 292 140
+             H 372
+             V 220
+             C 407 215, 427 240, 427 256
+             C 427 272, 407 297, 372 292
+             V 372
+             H 292
+             C 297 407, 272 427, 256 427
+             C 240 427, 215 407, 220 372
+             H 140
+             V 292
+             C 175 297, 195 272, 195 256
+             C 195 240, 175 215, 140 220
+             Z"
+          fill="#1e293b" stroke="#38bdf8" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Tricolor bands inside puzzle piece via clip -->
+  <clipPath id="puzzleClip">
+    <path d="M 140 140
+             H 220
+             C 215 105, 240 85, 256 85
+             C 272 85, 297 105, 292 140
+             H 372
+             V 220
+             C 407 215, 427 240, 427 256
+             C 427 272, 407 297, 372 292
+             V 372
+             H 292
+             C 297 407, 272 427, 256 427
+             C 240 427, 215 407, 220 372
+             H 140
+             V 292
+             C 175 297, 195 272, 195 256
+             C 195 240, 175 215, 140 220
+             Z"/>
+  </clipPath>
+
+  <g clip-path="url(#puzzleClip)">
+    <rect x="80" y="80" width="360" height="96" fill="url(#flagWhite)"/>
+    <rect x="80" y="176" width="360" height="96" fill="url(#flagBlue)"/>
+    <rect x="80" y="272" width="360" height="160" fill="url(#flagRed)"/>
+
+    <!-- Map contour overlay or landmark silhouette (Spasskaya Tower / Kremlin dome) -->
+    <path d="M 256 160 L 262 185 H 250 Z" fill="#fbbf24"/>
+    <circle cx="256" cy="188" r="5" fill="#fbbf24"/>
+    <path d="M 248 193 H 264 V 215 H 248 Z" fill="#ffffff" fill-opacity="0.9"/>
+    <!-- Star -->
+    <polygon points="256,145 258,152 265,152 259,156 261,163 256,159 251,163 253,156 247,152 254,152" fill="#ef4444" stroke="#fbbf24" stroke-width="1"/>
+  </g>
+
+  <!-- Number 89 / Region Plate badge on bottom corner -->
+  <g transform="translate(160, 440)">
+    <rect width="192" height="42" rx="6" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+    <text x="56" y="28" font-family="monospace, sans-serif" font-weight="900" font-size="22" fill="#0f172a" letter-spacing="3">РОССИЯ</text>
+    <line x1="140" y1="4" x2="140" y2="38" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="165" y="22" font-family="monospace, sans-serif" font-weight="900" font-size="14" fill="#0f172a" text-anchor="middle">89</text>
+    <text x="165" y="34" font-family="sans-serif" font-weight="700" font-size="9" fill="#0f172a" text-anchor="middle">RUS</text>
+  </g>
+</svg>
